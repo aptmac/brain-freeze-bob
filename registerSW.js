@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/brain-freeze-bob/sw.js', { scope: '/brain-freeze-bob/' })})}
