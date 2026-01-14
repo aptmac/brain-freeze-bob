@@ -1,0 +1,432 @@
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.card h2, .card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.card h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.description {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.radio-label:hover {
+  border-color: var(--accent-primary);
+  background: var(--bg-secondary);
+}
+
+.radio-label input[type="radio"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+}
+
+.radio-label span {
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.checkbox-label:hover {
+  border-color: var(--accent-primary);
+  background: var(--bg-secondary);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 1.25rem;
+  cursor: pointer;
+  margin: 0 0.5rem 0 0;
+  flex-shrink: 0;
+}
+
+.checkbox-label span {
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-secondary);
+}
+
+.btn-secondary {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-secondary);
+  border-color: var(--accent-primary);
+}
+
+.results-card {
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notification {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.notification.success {
+  background: rgba(66, 190, 101, 0.1);
+  border: 1px solid var(--success);
+}
+
+.notification strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--success);
+}
+
+.notification p {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.casting-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.casting-step {
+  padding: 0.75rem;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  border-left: 3px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.casting-step:hover {
+  background: var(--bg-secondary);
+  border-left-color: var(--accent-primary);
+}
+
+.casting-step.setup {
+  border-left-color: var(--accent-primary);
+  background: rgba(15, 98, 254, 0.1);
+}
+
+.casting-step.loop {
+  border-left-color: var(--success);
+}
+
+.loop-header {
+  font-weight: 600;
+  color: var(--accent-secondary);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.step-content {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-number {
+  color: var(--text-tertiary);
+  font-weight: 600;
+  min-width: 2rem;
+}
+
+.step-description {
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.step-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.875rem;
+  padding-left: 2.75rem;
+}
+
+.stat {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.stat.mill {
+  color: var(--accent-secondary);
+  font-weight: 600;
+}
+
+.stat.total-mill {
+  color: var(--success);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.final-summary {
+  padding: 1rem;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  border: 2px solid var(--accent-primary);
+}
+
+.final-summary p {
+  margin: 0.5rem 0;
+  font-size: 1.125rem;
+  color: var(--text-primary);
+}
+
+.final-summary strong {
+  color: var(--accent-secondary);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Storm Insertion UI */
+.step-insertion-zone {
+  position: relative;
+  height: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.2s ease;
+}
+
+.step-insertion-zone:hover {
+  height: 40px;
+}
+
+.btn-insert-storm {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(15, 98, 254, 0.3);
+  animation: fadeIn 0.2s ease;
+}
+
+.btn-insert-storm:hover {
+  background: var(--accent-secondary);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(15, 98, 254, 0.4);
+}
+
+.btn-insert-storm:active {
+  transform: scale(0.98);
+}
+
+.insert-icon {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.insert-text {
+  font-size: 0.875rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Storm Step Styling */
+.casting-step.custom-step {
+  border-left-color: #ff9800;
+  background: rgba(255, 152, 0, 0.1);
+  position: relative;
+}
+
+.casting-step.custom-step .step-description {
+  font-style: italic;
+  color: #ff9800;
+}
+
+.btn-remove-custom {
+  background: rgba(255, 59, 48, 0.1);
+  color: #ff3b30;
+  border: 1px solid rgba(255, 59, 48, 0.3);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1;
+  transition: all 0.2s ease;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.btn-remove-custom:hover {
+  background: rgba(255, 59, 48, 0.2);
+  border-color: #ff3b30;
+  transform: scale(1.1);
+}
+
+.btn-remove-custom:active {
+  transform: scale(0.95);
+}
+
+/* Adjust step content to accommodate remove button */
+.casting-step.custom-step .step-content {
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .step-insertion-zone:hover {
+    height: 36px;
+  }
+
+  .btn-insert-storm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .insert-icon {
+    font-size: 1rem;
+  }
+
+  .insert-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* Made with Bob */
