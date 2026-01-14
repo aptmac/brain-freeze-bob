@@ -5,14 +5,14 @@ import './App.css'
 
 function App() {
   const location = useLocation()
-  const activeTab = location.pathname === '/sandbox' ? 'sandbox' : 'calculator'
+  const activeTab = location.pathname.includes('/sandbox') ? 'sandbox' : 'calculator'
 
   return (
     <div className="app">
       <header className="app-header">
         <h1 className="app-title">❄️ Brain Freeze</h1>
         <p className="app-subtitle">
-          MTG Combo Calculator by <a href="https://www.ibm.com/products/bob" target="_blank" rel="noopener noreferrer" className="bob-link"><img src="/bob-logo.png" alt="Bob" className="bob-logo" /> Bob</a>
+          MTG Combo Calculator by <a href="https://www.ibm.com/products/bob" target="_blank" rel="noopener noreferrer" className="bob-link"><img src={`${import.meta.env.BASE_URL}bob-logo.png`} alt="Bob" className="bob-logo" /> Bob</a>
         </p>
         
         <div className="tab-navigation">
