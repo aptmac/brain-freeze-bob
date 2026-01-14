@@ -355,7 +355,7 @@
 
 @media (max-width: 768px) {
   .sandbox-status {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 
   .button-grid {
@@ -372,6 +372,12 @@
 
   .event-log {
     max-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sandbox-status {
+    grid-template-columns: 1fr;
   }
 }
 

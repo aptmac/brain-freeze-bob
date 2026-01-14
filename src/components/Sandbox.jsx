@@ -286,10 +286,6 @@ function Sandbox() {
               </>
             )}
           </div>
-          <div className="status-item input-item">
-            <strong>Exile Size:</strong>
-            <span className="size-value">🚫 {exileSize} cards</span>
-          </div>
         </div>
 
         <div className="controls">
